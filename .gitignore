@@ -1,0 +1,10 @@
+docs/superpowers/
+/build/
+node_modules/
+infra/cdk.out/
+infra/cdk-outputs.json
+*.tsbuildinfo
+.DS_Store
+docs/findings.md
+docs/**/*feedback*
+docs/notes/

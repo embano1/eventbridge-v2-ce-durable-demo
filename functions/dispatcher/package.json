@@ -1,0 +1,19 @@
+{
+  "name": "eb-v2-demo-dispatcher",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@aws-lambda-powertools/logger": "2.35.0",
+    "@aws-sdk/client-lambda": "3.1141.0"
+  },
+  "devDependencies": {
+    "@types/node": "24.19.0",
+    "esbuild": "0.28.2",
+    "typescript": "5.9.3",
+    "vitest": "5.0.2"
+  }
+}

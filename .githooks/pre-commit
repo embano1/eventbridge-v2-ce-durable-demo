@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+set -euo pipefail
+cd "$(git rev-parse --show-toplevel)"
+
+# Anything .gitignore marks as local stays local, even when force-added.
+if blocked=$(git diff --cached --name-only --diff-filter=d | git check-ignore --no-index --stdin); then
+  printf 'pre-commit: these files are ignored and must stay local:\n%s\n' "$blocked" >&2
+  exit 1
+fi
+scripts/check-public.sh --cached
